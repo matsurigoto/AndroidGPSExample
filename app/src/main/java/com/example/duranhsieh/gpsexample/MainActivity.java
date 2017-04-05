@@ -16,10 +16,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements LocationListener {
 
     private TextView textStatus;
-    private Button button;
+    private LocationManager lms;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +27,56 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         textStatus = (TextView) findViewById(R.id.message_display);
-        button = (Button) findViewById(R.id.button_click);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Perform action on click
-                textStatus.setText("clicked!");
+        //取得定位服務
+        LocationManager status = (LocationManager) (this.getSystemService(Context.LOCATION_SERVICE));
+        if (status.isProviderEnabled(LocationManager.GPS_PROVIDER) || status.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+            lms = (LocationManager) getSystemService(LOCATION_SERVICE);
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
             }
-        });
+            Location location = lms.getLastKnownLocation(LocationManager.GPS_PROVIDER);//使用GPS
+            getLocation(location);
+        } else {
+            Toast.makeText(this, "請開啟定位服務", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));	//開啟設定
+        }
+    }
+
+    private void getLocation(Location location) {
+        if(location != null) {
+            Double longitude = location.getLongitude();
+            Double latitude = location.getLatitude();
+            textStatus.setText("longitude:" + String.valueOf(longitude) + " latitude:"+ String.valueOf(latitude));
+        }
+        else {
+            Toast.makeText(this, "無法定位座標", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        getLocation(location);
+    }
+
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+
     }
 }
