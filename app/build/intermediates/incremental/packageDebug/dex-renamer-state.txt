@@ -1,0 +1,7 @@
+#Wed Apr 05 12:38:15 CST 2017
+base.0=C\:\\Users\\Duran Hsieh\\AndroidStudioProjects\\GPSExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_28002a102811fe2d5d72126dd9c6d50acccd2d26
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Duran Hsieh\\AndroidStudioProjects\\GPSExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_01c1f0d9482598bbfa41f7dea0e6b36e2349f2dd\\classes.dex
+base.1=C\:\\Users\\Duran Hsieh\\AndroidStudioProjects\\GPSExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_01c1f0d9482598bbfa41f7dea0e6b36e2349f2dd
+file.0=C\:\\Users\\Duran Hsieh\\AndroidStudioProjects\\GPSExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_28002a102811fe2d5d72126dd9c6d50acccd2d26\\classes.dex

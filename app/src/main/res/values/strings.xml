@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GPSExample</string>
+    <string name="display_message">Hello World!</string>
+    <string name="button_gps_click">click</string>
+</resources>

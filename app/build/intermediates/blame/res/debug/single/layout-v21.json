@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Duran Hsieh\\AndroidStudioProjects\\GPSExample\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Duran Hsieh\\.android\\build-cache\\30084aa8dc4d120a7997504b85700f2f6dae2edf\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Duran Hsieh\\AndroidStudioProjects\\GPSExample\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Duran Hsieh\\.android\\build-cache\\30084aa8dc4d120a7997504b85700f2f6dae2edf\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\Duran Hsieh\\AndroidStudioProjects\\GPSExample\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Duran Hsieh\\.android\\build-cache\\30084aa8dc4d120a7997504b85700f2f6dae2edf\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Duran Hsieh\\AndroidStudioProjects\\GPSExample\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Duran Hsieh\\.android\\build-cache\\30084aa8dc4d120a7997504b85700f2f6dae2edf\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    }
+]
